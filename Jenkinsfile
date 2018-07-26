@@ -18,7 +18,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'pytest test_summ.py' 
+                sh 'pytest --verbose --junit-xml test-reports/results.xml test_summ.py' 
             }
             post {
                 always {
